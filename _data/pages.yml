@@ -3,10 +3,10 @@ pages_list_title: Taylor McRae
 pages:
 
 - title: Home
-  url: index.html
+  url: /index.html
 
 - title: About
-  url: about.html
+  url: /about.html
 
 - title: Blog
-  url: blog/index.html
+  url: /blog
