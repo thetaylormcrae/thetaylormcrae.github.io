@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    </head>
-    <body>
-        <nav>
-            <ul>
-                {% for item in site.data.pages.pages %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
-        <div class="container">
-            {{ content }}
-        </div>
-        <footer>
-            <ul>
-                <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-                <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-            </ul>
-        </footer>
-    </body>
+
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            {% for item in site.data.pages.pages %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <div class="container">
+        {{ content }}
+    </div>
+    <footer>
+        <ul>
+            {% for item in site.data.links.footer %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </footer>
+</body>
+
 </html>
